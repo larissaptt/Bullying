@@ -13,8 +13,8 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            background: #f9f7f3;  /* tom pastel suave */
-            padding: 20px;
+            background: #f9f7f3;
+            padding: 24px 20px;  /* aumentei padding superior */
             color: #3b3a36;
         }
 
@@ -26,14 +26,15 @@
         /* cabeçalho */
         .header {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         h1 {
-            font-size: 1.7rem;
-            color: #6b4c3b;   /* terroso pastel */
+            font-size: 2rem;      /* título maior */
+            color: #6b4c3b;
             font-weight: 600;
-            letter-spacing: -0.2px;
+            letter-spacing: -0.3px;
+            margin-top: 8px;      /* margem superior extra */
         }
 
         .sub {
@@ -66,7 +67,50 @@
             color: #8b5a2b;
         }
 
-        /* cards */
+        /* seções comuns */
+        section {
+            margin-top: 32px;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #6b4c3b;
+            margin-bottom: 16px;
+            border-left: 3px solid #d9b48b;
+            padding-left: 12px;
+        }
+
+        /* cards para papéis */
+        .roles-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .role-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 16px 18px;
+            border: 1px solid #e6dfd3;
+        }
+
+        .role-card h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #6a4e2e;
+            margin-bottom: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        .role-card p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #4f4940;
+        }
+
+        /* cards das diferenças (já existentes) */
         .cards-grid {
             display: flex;
             flex-direction: column;
@@ -79,7 +123,6 @@
             border-radius: 20px;
             padding: 18px 20px;
             border: 1px solid #e6dfd3;
-            box-shadow: none;
         }
 
         .card h3 {
@@ -120,7 +163,6 @@
             position: absolute;
             left: 4px;
             color: #b99e7c;
-            font-weight: normal;
         }
 
         .card.cyber li::before {
@@ -136,12 +178,54 @@
             color: #4f6b4a;
         }
 
+        /* consequências */
+        .consequencias {
+            background: #fef9e6;
+            border-radius: 20px;
+            padding: 18px;
+            margin-top: 8px;
+            border-left: 4px solid #c4a27a;
+        }
+
+        .consequencias h6 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #6b4c3b;
+            margin-bottom: 12px;
+            font-style: normal;
+        }
+
+        .consequencias ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .consequencias li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.4;
+            font-size: 0.85rem;
+            color: #4a3e35;
+        }
+
+        .consequencias li::before {
+            content: "–";
+            position: absolute;
+            left: 4px;
+            color: #b99e7c;
+        }
+
+        .consequencias strong {
+            color: #8b5a2b;
+        }
+
         /* bloco informativo */
         .info-note {
             background: #f1ede5;
             border-radius: 18px;
             padding: 14px 18px;
-            margin-top: 28px;
+            margin-top: 32px;
             font-size: 0.85rem;
             text-align: center;
             color: #5c5348;
@@ -164,7 +248,7 @@
         }
 
         /* sem efeitos de movimento */
-        .card:hover, .info-note:hover {
+        .card:hover, .role-card:hover, .info-note:hover {
             transform: none;
             box-shadow: none;
         }
@@ -177,6 +261,7 @@
         <div class="sub">informação, diferenças e como agir</div>
     </div>
 
+    <!-- Definições legais -->
     <div class="definicoes">
         <p>
             <strong>Bullying</strong> – definido pela Lei nº 13.185/2015 como a intimidação sistemática, caracterizada por violência física ou psicológica em atos de humilhação e discriminação. A palavra deriva do inglês <em>to bully</em> (intimidar), descrevendo uma relação onde há repetição de agressões e um claro desequilíbrio de poder: o agressor se sente superior, e a vítima não consegue se defender.
@@ -186,6 +271,7 @@
         </p>
     </div>
 
+    <!-- Comparativo bullying vs cyberbullying -->
     <div class="cards-grid">
         <div class="card bullying">
             <h3>Bullying (presencial)</h3>
@@ -208,14 +294,52 @@
         </div>
     </div>
 
+    <!-- SEÇÃO: Papéis envolvidos -->
+    <section>
+        <h4>Os papéis envolvidos</h4>
+        <div class="roles-grid">
+            <div class="role-card">
+                <h5>Agressor (Bullie)</h5>
+                <p>Quem pratica a agressão. Pode agir sozinho ou em grupo. Estudos mostram que agressores também costumam apresentar sintomas depressivos.</p>
+            </div>
+            <div class="role-card">
+                <h5>Vítima</h5>
+                <p>Quem sofre a agressão. Pode desenvolver ansiedade, baixa autoestima, isolamento social e queda no rendimento escolar.</p>
+            </div>
+            <div class="role-card">
+                <h5>Vítima-Agressora</h5>
+                <p>Uma pessoa que é vítima em um ambiente e agressora em outro, alternando papéis. Isso causa grande confusão na formação da identidade do jovem.</p>
+            </div>
+            <div class="role-card">
+                <h5>Testemunhas (Plateia)</h5>
+                <p>São a maioria. Quando se calam, legitimam a violência para o agressor e causam sensação de abandono para a vítima. É fundamental ensinar as testemunhas a intervir ou pedir ajuda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: Consequências para a saúde mental -->
+    <section>
+        <h4>Consequências para a saúde mental</h4>
+        <div class="consequencias">
+            <h6>Os impactos não são "brincadeiras de criança". Segundo pesquisas acadêmicas e fontes de saúde, as consequências podem ser graves.</h6>
+            <ul>
+                <li><strong>Para a vítima:</strong> Medo, vergonha, ansiedade, depressão, síndrome do pânico, ideação suicida e, em casos extremos, atos de vingança (como ataques a escolas).</li>
+                <li><strong>Para o agressor:</strong> Se não for corrigido, o comportamento violento se perpetua, podendo levar à exclusão social e até à criminalidade na vida adulta.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Bloco informativo e rodapé -->
     <div class="info-note">
-        <strong>Você sabia?</strong> O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
+        O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
         SaferNet Brasil: <a href="https://www.safernet.org.br" target="_blank">canaldeajuda.org.br</a> | Disque 100
     </div>
 
     <div class="footer">
-        Baseado na Lei nº 13.185/2015 e em diretrizes de segurança digital.<br>
-        Compartilhe informação — fale sobre o assunto.
+        Site produzido por alunos da Escola Estadual Básica Professor Heleodoro Borges <br>
+        Terceirão Integral | Técnico em Informática para Internet | 2026
+        <p style="margin-top: 8px;">Fontes: Lei nº 13.185/2015 | SaferNet Brasil | UNICEF Brasil</p>
+        <p style="margin-top: 6px;">Jaraguá do Sul - SC</p>
     </div>
 </div>
 </body>
