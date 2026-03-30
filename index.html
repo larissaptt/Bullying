@@ -13,9 +13,9 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            background: #f9f7f3;
-            padding: 24px 20px;  /* aumentei padding superior */
-            color: #3b3a36;
+            background: #eef2fa;
+            padding: 24px 20px;
+            color: #1a2a3a;
         }
 
         .container {
@@ -23,40 +23,39 @@
             margin: 0 auto;
         }
 
-        /* cabeçalho */
         .header {
             text-align: center;
             margin-bottom: 28px;
         }
 
         h1 {
-            font-size: 2rem;      /* título maior */
-            color: #6b4c3b;
+            font-size: 2rem;
+            color: #1e3a5f;
             font-weight: 600;
             letter-spacing: -0.3px;
-            margin-top: 8px;      /* margem superior extra */
+            margin-top: 8px;
         }
 
         .sub {
             font-size: 0.9rem;
-            color: #8b7a6b;
+            color: #4a6a8a; 
             margin-top: 6px;
         }
 
-        /* definições legais */
         .definicoes {
-            background: #fef9e6;
+            background: #ffffff;
             padding: 18px;
             border-radius: 20px;
             margin-bottom: 28px;
-            border-left: 4px solid #c4a27a;
+
+            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.08); 
         }
 
         .definicoes p {
             font-size: 0.9rem;
             line-height: 1.45;
             margin-bottom: 12px;
-            color: #4a3e35;
+            color: #2c3e4e;
         }
 
         .definicoes p:last-child {
@@ -64,10 +63,10 @@
         }
 
         .definicoes strong {
-            color: #8b5a2b;
+            color: #1e4a76;
         }
 
-        /* seções comuns */
+
         section {
             margin-top: 32px;
         }
@@ -75,13 +74,13 @@
         h4 {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #6b4c3b;
+            color: #1e3a5f; 
             margin-bottom: 16px;
-            border-left: 3px solid #d9b48b;
+            border-left: 3px solid #5a8ab0; 
             padding-left: 12px;
         }
 
-        /* cards para papéis */
+
         .roles-grid {
             display: flex;
             flex-direction: column;
@@ -93,13 +92,14 @@
             background: #ffffff;
             border-radius: 20px;
             padding: 16px 18px;
-            border: 1px solid #e6dfd3;
+            border: 1px solid #cbdde9;
+            box-shadow: 0 2px 6px rgba(0, 40, 60, 0.06);
         }
 
         .role-card h5 {
             font-size: 1rem;
             font-weight: 700;
-            color: #6a4e2e;
+            color: #1e4a76;
             margin-bottom: 8px;
             letter-spacing: -0.2px;
         }
@@ -107,10 +107,9 @@
         .role-card p {
             font-size: 0.85rem;
             line-height: 1.4;
-            color: #4f4940;
+            color: #2c4a6a;
         }
 
-        /* cards das diferenças (já existentes) */
         .cards-grid {
             display: flex;
             flex-direction: column;
@@ -122,7 +121,8 @@
             background: #ffffff;
             border-radius: 20px;
             padding: 18px 20px;
-            border: 1px solid #e6dfd3;
+            border: 1px solid #cbdde9;
+            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.06);
         }
 
         .card h3 {
@@ -134,16 +134,10 @@
             display: inline-block;
         }
 
-        .card.bullying h3 {
-            border-bottom-color: #d9b48b;
-            color: #6b4c3b;
+        .card.bullying h3, .card.cyber h3  {
+            border-bottom-color: #5a8ab0; 
+            color: #1e3a5f;
         }
-
-        .card.cyber h3 {
-            border-bottom-color: #b0c4b1;
-            color: #4f6b4a;
-        }
-
         .card ul {
             list-style: none;
             padding-left: 0;
@@ -155,42 +149,42 @@
             position: relative;
             line-height: 1.4;
             font-size: 0.9rem;
-            color: #3e3a35;
+            color: #2c3e4e;
         }
 
         .card li::before {
             content: "–";
             position: absolute;
             left: 4px;
-            color: #b99e7c;
+            color: #5a8ab0; 
         }
 
         .card.cyber li::before {
-            color: #8ba888;
+            color: #5a8ab0;
         }
 
         .card strong {
             font-weight: 600;
-            color: #6a4e2e;
+            color: #1e4a76; 
         }
 
         .card.cyber strong {
-            color: #4f6b4a;
+            color: #1e4a76; 
         }
 
         /* consequências */
         .consequencias {
-            background: #fef9e6;
+            background: #ffffff;
             border-radius: 20px;
             padding: 18px;
             margin-top: 8px;
-            border-left: 4px solid #c4a27a;
+            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.06);
         }
 
         .consequencias h6 {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #6b4c3b;
+            color: #1e3a5f;
             margin-bottom: 12px;
             font-style: normal;
         }
@@ -206,34 +200,34 @@
             position: relative;
             line-height: 1.4;
             font-size: 0.85rem;
-            color: #4a3e35;
+            color: #2c3e4e;
         }
 
         .consequencias li::before {
             content: "–";
             position: absolute;
             left: 4px;
-            color: #b99e7c;
+            color: #5a8ab0; 
         }
 
         .consequencias strong {
-            color: #8b5a2b;
+            color: #1e4a76; 
         }
 
-        /* bloco informativo */
         .info-note {
-            background: #f1ede5;
+            background: #ffffff;
             border-radius: 18px;
             padding: 14px 18px;
             margin-top: 32px;
             font-size: 0.85rem;
             text-align: center;
-            color: #5c5348;
-            border: 1px solid #e0d6ca;
+            color: #2c4a6a;
+            border: 1px solid #cbdde9;
+            box-shadow: 0 2px 6px rgba(0, 40, 60, 0.06);
         }
 
         .info-note a {
-            color: #8b6b42;
+            color: #1e4a76;
             text-decoration: none;
             font-weight: 500;
         }
@@ -242,16 +236,11 @@
             margin-top: 28px;
             text-align: center;
             font-size: 0.7rem;
-            color: #998e82;
-            border-top: 1px solid #e2d8ce;
+            color: #5a7a9a;
+            border-top: 1px solid #cbdde9;
             padding-top: 16px;
         }
 
-        /* sem efeitos de movimento */
-        .card:hover, .role-card:hover, .info-note:hover {
-            transform: none;
-            box-shadow: none;
-        }
     </style>
 </head>
 <body>
@@ -261,7 +250,7 @@
         <div class="sub">informação, diferenças e como agir</div>
     </div>
 
-    <!-- Definições legais -->
+
     <div class="definicoes">
         <p>
             <strong>Bullying</strong> – definido pela Lei nº 13.185/2015 como a intimidação sistemática, caracterizada por violência física ou psicológica em atos de humilhação e discriminação. A palavra deriva do inglês <em>to bully</em> (intimidar), descrevendo uma relação onde há repetição de agressões e um claro desequilíbrio de poder: o agressor se sente superior, e a vítima não consegue se defender.
@@ -271,7 +260,7 @@
         </p>
     </div>
 
-    <!-- Comparativo bullying vs cyberbullying -->
+
     <div class="cards-grid">
         <div class="card bullying">
             <h3>Bullying (presencial)</h3>
@@ -294,7 +283,6 @@
         </div>
     </div>
 
-    <!-- SEÇÃO: Papéis envolvidos -->
     <section>
         <h4>Os papéis envolvidos</h4>
         <div class="roles-grid">
@@ -316,8 +304,6 @@
             </div>
         </div>
     </section>
-
-    <!-- SEÇÃO: Consequências para a saúde mental -->
     <section>
         <h4>Consequências para a saúde mental</h4>
         <div class="consequencias">
@@ -329,7 +315,6 @@
         </div>
     </section>
 
-    <!-- Bloco informativo e rodapé -->
     <div class="info-note">
         O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
         SaferNet Brasil: <a href="https://www.safernet.org.br" target="_blank">canaldeajuda.org.br</a> | Disque 100
