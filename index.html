@@ -42,13 +42,13 @@
             margin-top: 6px;
         }
 
+        /* definições legais - sem card, apenas texto */
         .definicoes {
             background: #ffffff;
             padding: 18px;
             border-radius: 20px;
             margin-bottom: 28px;
-
-            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.08); 
+            box-shadow: 4px 4px 12px rgba(0, 40, 60, 0.15);
         }
 
         .definicoes p {
@@ -66,7 +66,6 @@
             color: #1e4a76;
         }
 
-
         section {
             margin-top: 32px;
         }
@@ -80,10 +79,10 @@
             padding-left: 12px;
         }
 
-
+        /* papéis envolvidos - grid 2x2 */
         .roles-grid {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-top: 8px;
         }
@@ -91,13 +90,13 @@
         .role-card {
             background: #ffffff;
             border-radius: 20px;
-            padding: 16px 18px;
+            padding: 16px 14px;
             border: 1px solid #cbdde9;
-            box-shadow: 0 2px 6px rgba(0, 40, 60, 0.06);
+            box-shadow: 4px 4px 10px rgba(0, 40, 60, 0.12);
         }
 
         .role-card h5 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #1e4a76;
             margin-bottom: 8px;
@@ -105,11 +104,12 @@
         }
 
         .role-card p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             line-height: 1.4;
             color: #2c4a6a;
         }
 
+        /* cards das diferenças */
         .cards-grid {
             display: flex;
             flex-direction: column;
@@ -122,7 +122,7 @@
             border-radius: 20px;
             padding: 18px 20px;
             border: 1px solid #cbdde9;
-            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.06);
+            box-shadow: 4px 4px 12px rgba(0, 40, 60, 0.15);
         }
 
         .card h3 {
@@ -134,10 +134,11 @@
             display: inline-block;
         }
 
-        .card.bullying h3, .card.cyber h3  {
+        .card.bullying h3, .card.cyber h3 {
             border-bottom-color: #5a8ab0; 
             color: #1e3a5f;
         }
+        
         .card ul {
             list-style: none;
             padding-left: 0;
@@ -159,26 +160,18 @@
             color: #5a8ab0; 
         }
 
-        .card.cyber li::before {
-            color: #5a8ab0;
-        }
-
         .card strong {
             font-weight: 600;
             color: #1e4a76; 
         }
 
-        .card.cyber strong {
-            color: #1e4a76; 
-        }
-
-        /* consequências */
+        /* consequências - sem card, apenas texto */
         .consequencias {
             background: #ffffff;
             border-radius: 20px;
             padding: 18px;
             margin-top: 8px;
-            box-shadow: 0 2px 8px rgba(0, 40, 60, 0.06);
+            box-shadow: 4px 4px 12px rgba(0, 40, 60, 0.15);
         }
 
         .consequencias h6 {
@@ -214,6 +207,7 @@
             color: #1e4a76; 
         }
 
+        /* bloco informativo */
         .info-note {
             background: #ffffff;
             border-radius: 18px;
@@ -223,7 +217,7 @@
             text-align: center;
             color: #2c4a6a;
             border: 1px solid #cbdde9;
-            box-shadow: 0 2px 6px rgba(0, 40, 60, 0.06);
+            box-shadow: 4px 4px 10px rgba(0, 40, 60, 0.12);
         }
 
         .info-note a {
@@ -241,6 +235,21 @@
             padding-top: 16px;
         }
 
+        /* responsividade para telas menores */
+        @media (max-width: 480px) {
+            .roles-grid {
+                gap: 12px;
+            }
+            .role-card {
+                padding: 14px 12px;
+            }
+            .role-card h5 {
+                font-size: 0.9rem;
+            }
+            .role-card p {
+                font-size: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -250,7 +259,7 @@
         <div class="sub">informação, diferenças e como agir</div>
     </div>
 
-
+    <!-- Definições legais - sem card, apenas texto com fundo e sombra -->
     <div class="definicoes">
         <p>
             <strong>Bullying</strong> – definido pela Lei nº 13.185/2015 como a intimidação sistemática, caracterizada por violência física ou psicológica em atos de humilhação e discriminação. A palavra deriva do inglês <em>to bully</em> (intimidar), descrevendo uma relação onde há repetição de agressões e um claro desequilíbrio de poder: o agressor se sente superior, e a vítima não consegue se defender.
@@ -260,7 +269,7 @@
         </p>
     </div>
 
-
+    <!-- Comparativo bullying vs cyberbullying - cards com sombra direita/baixo -->
     <div class="cards-grid">
         <div class="card bullying">
             <h3>Bullying (presencial)</h3>
@@ -283,6 +292,7 @@
         </div>
     </div>
 
+    <!-- Papéis envolvidos - grid 2x2 com cards e sombra direita/baixo -->
     <section>
         <h4>Os papéis envolvidos</h4>
         <div class="roles-grid">
@@ -304,6 +314,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Consequências - sem card, apenas texto com fundo e sombra -->
     <section>
         <h4>Consequências para a saúde mental</h4>
         <div class="consequencias">
@@ -315,6 +327,7 @@
         </div>
     </section>
 
+    <!-- Bloco informativo com sombra direita/baixo -->
     <div class="info-note">
         O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
         SaferNet Brasil: <a href="https://www.safernet.org.br" target="_blank">canaldeajuda.org.br</a> | Disque 100
