@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bullying e Cyberbullying</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f8;
+            padding: 20px;
+            color: #1e2a3e;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #0f3b5c;
+            margin-bottom: 8px;
+        }
+
+        .sub {
+            font-size: 1rem;
+            color: #2c5a7a;
+            border-left: 3px solid #e67e22;
+            padding-left: 12px;
+            margin-top: 8px;
+        }
+
+        .cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 5px solid;
+            padding-left: 14px;
+        }
+
+        .card.bullying h4 {
+            border-left-color: #e67e22;
+            color: #c2410c;
+        }
+
+        .card.cyber h4 {
+            border-left-color: #2c6e9e;
+            color: #0f3b5c;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            margin-bottom: 14px;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+
+        .card li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .bullying li::before {
+            color: #e67e22;
+        }
+
+        .cyber li::before {
+            color: #2c6e9e;
+        }
+
+        .card strong {
+            color: #0f3b5c;
+            font-weight: 600;
+        }
+
+        .info-note {
+            background: #eef2f7;
+            border-radius: 20px;
+            padding: 16px;
+            margin-top: 28px;
+            font-size: 0.85rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .info-note a {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #5a6e7c;
+            border-top: 1px solid #dce4ec;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Bullying & Cyberbullying</h1>
+        <div class="sub">informação, diferenças e como agir</div>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card bullying">
+            <h4>📌 Bullying</h4>
+            <ul>
+                <li><strong>Localizado:</strong> Geralmente ocorre na escola, no transporte ou em ambientes de convívio.</li>
+                <li><strong>Visível:</strong> As agressões são presenciais (físicas ou verbais) e vistas por um grupo limitado.</li>
+                <li><strong>Identidade:</strong> A identidade do agressor costuma ser conhecida pela vítima e pelos colegas.</li>
+                <li><strong>Limite físico:</strong> A casa da vítima costuma ser um local de refúgio — o ambiente familiar oferece pausa.</li>
+            </ul>
+        </div>
+
+        <div class="card cyber">
+            <h4>💻 Cyberbullying</h4>
+            <ul>
+                <li><strong>Pervasivo:</strong> A vítima pode ser atingida a qualquer hora e em qualquer lugar (casa, escola, etc.).</li>
+                <li><strong>Viral:</strong> O conteúdo (foto, vídeo, mensagem) pode ser compartilhado massivamente e ficar disponível para sempre.</li>
+                <li><strong>Anonimato:</strong> A falsa sensação de anonimato encoraja o agressor, que muitas vezes não vê a reação da vítima, sentindo menos remorso.</li>
+                <li><strong>Sem trégua:</strong> Não há um ambiente seguro; o celular e o computador viram canais de agressão constante.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-note">
+        💡 <strong>Você sabia?</strong> O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
+        📞 <strong>SaferNet Brasil:</strong> <a href="https://www.safernet.org.br" target="_blank">canaldeajuda.org.br</a> | Disque 100
+    </div>
+
+    <div class="footer">
+        Baseado na Lei nº 13.185/2015 e em diretrizes de segurança digital.<br>
+        Compartilhe informação — fale sobre o assunto.
+    </div>
+</div>
+</body>
+</html>
