@@ -34,7 +34,19 @@ h1 {
     color: #4a6a8a; 
     margin-top: 6px;
 }
+.imagem-topo{
+    width:100%;
+    max-width:600px;
+    display:block;
+    margin:20px auto 28px auto;
 
+    border-radius:20px;
+    border:1px solid #cbdde9;
+
+    box-shadow:6px 6px 14px rgba(0, 40, 60, 0.25);
+
+    object-fit:cover;
+}
 .definicoes {
     background: #ffffff;
     padding: 18px;
