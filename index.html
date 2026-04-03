@@ -4,341 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Bullying e Cyberbullying</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            background: #eef2fa;
-            padding: 24px 20px;
-            color: #1a2a3a;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #1e3a5f;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-            margin-top: 8px;
-        }
-
-        .sub {
-            font-size: 0.9rem;
-            color: #4a6a8a; 
-            margin-top: 6px;
-        }
-
-        /* definições legais - sem card, apenas texto */
-         .definicoes {
-            background: #ffffff;
-            padding: 18px;
-            border-radius: 20px;
-            margin-bottom: 28px;
-            box-shadow: 6px 6px 14px rgba(0, 40, 60, 0.25);
-        }
-
-
-        .definicoes p {
-            font-size: 0.9rem;
-            line-height: 1.45;
-            margin-bottom: 12px;
-            color: #2c3e4e;
-        }
-
-        .definicoes p:last-child {
-            margin-bottom: 0;
-        }
-
-        .definicoes strong {
-            color: #1e4a76;
-        }
-
-        section {
-            margin-top: 32px;
-        }
-
-        h4 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1e3a5f; 
-            margin-bottom: 16px;
-            padding-left: 12px;
-        }
-
-        /* papéis envolvidos - grid 2x2 */
-        .roles-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 8px;
-        }
-
-        .role-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 16px 14px;
-            border: 1px solid #cbdde9;
-            box-shadow: 6px 6px 14px rgba(0, 40, 60, 0.25);
-        }
-
-
-        .role-card h5 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1e4a76;
-            margin-bottom: 8px;
-            letter-spacing: -0.2px;
-        }
-
-        .role-card p {
-            font-size: 1rem;
-            line-height: 1.4;
-            color: #2c4a6a;
-        }
-
-        /* cards das diferenças */
-        .cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 8px;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 18px 20px;
-            border: 1px solid #cbdde9;
-            box-shadow: 6px 6px 14px rgba(0, 40, 60, 0.25);
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 14px;
-            padding-bottom: 6px;
-            display: inline-block;
-        }
-
-        .card.bullying h3, .card.cyber h3 {
-            color: #1e3a5f;
-        }
-        
-        .card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .card li {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.4;
-            font-size: 0.9rem;
-            color: #2c3e4e;
-        }
-
-        .card li::before {
-            content: "–";
-            position: absolute;
-            left: 4px;
-            color: #5a8ab0; 
-        }
-
-        .card strong {
-            font-weight: 600;
-            color: #1e4a76; 
-        }
-
-        /* consequências - sem card, apenas texto */
-          .consequencias {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 18px;
-            margin-top: 8px;
-            box-shadow: 6px 6px 14px rgba(0, 40, 60, 0.25);
-        }
-
-
-        .consequencias h6 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #1e3a5f;
-            margin-bottom: 12px;
-            font-style: normal;
-        }
-
-        .consequencias ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .consequencias li {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.4;
-            font-size: 0.85rem;
-            color: #2c3e4e;
-        }
-
-        .consequencias li::before {
-            content: "–";
-            position: absolute;
-            left: 4px;
-            color: #5a8ab0; 
-        }
-
-        .consequencias strong {
-            color: #1e4a76; 
-        }
-
-        /* bloco informativo */
-          .info-note {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 14px 18px;
-            margin-top: 32px;
-            font-size: 0.85rem;
-            text-align: center;
-            color: #2c4a6a;
-            border: 1px solid #cbdde9;
-            box-shadow: 6px 6px 14px rgba(0, 40, 60, 0.25);
-        }
-
-        .info-note a {
-            color: #1e4a76;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .footer {
-            margin-top: 28px;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #5a7a9a;
-            border-top: 1px solid #cbdde9;
-            padding-top: 16px;
-        }
-
-        /* responsividade para telas menores */
-        @media (max-width: 480px) {
-            .roles-grid {
-                gap: 12px;
-            }
-            .role-card {
-                padding: 14px 12px;
-            }
-            .role-card h5 {
-                font-size: 0.9rem;
-            }
-            .role-card p {
-                font-size: 0.75rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>Bullying e Cyberbullying</h1><br>
-        <div class="sub">informação, diferenças e como agir</div>
-    </div>
-
-    <!-- Definições legais - sem card, apenas texto com fundo e sombra -->
-    <div class="definicoes">
-        <p>
-            <strong>Bullying</strong> – definido pela Lei nº 13.185/2015 como a intimidação sistemática, caracterizada por violência física ou psicológica em atos de humilhação e discriminação. A palavra deriva do inglês <em>to bully</em> (intimidar), descrevendo uma relação onde há repetição de agressões e um claro desequilíbrio de poder: o agressor se sente superior, e a vítima não consegue se defender.
-        </p>
-        <p>
-            <strong>Cyberbullying</strong> – é a extensão dessa violência para o mundo digital. Segundo a mesma lei, ocorre quando se usam instrumentos da rede mundial de computadores para depreciar, incitar violência ou criar meios de constrangimento.
-        </p>
-    </div>
-
-    <!-- Comparativo bullying vs cyberbullying - cards com sombra direita/baixo -->
-    <div class="cards-grid">
-        <div class="card bullying">
-            <h3>Bullying (presencial)</h3>
-            <ul>
-                <li><strong>Localizado:</strong> geralmente ocorre na escola, no transporte ou em ambientes de convívio.</li>
-                <li><strong>Visível:</strong> as agressões são presenciais (físicas ou verbais) e vistas por um grupo limitado.</li>
-                <li><strong>Identidade:</strong> a identidade do agressor costuma ser conhecida pela vítima e pelos colegas.</li>
-                <li><strong>Limite físico:</strong> a casa da vítima costuma ser um local de refúgio — o ambiente familiar oferece pausa.</li>
-            </ul>
+    <div class="container">
+        <div class="header">
+            <h1>Bullying e Cyberbullying</h1><br>
+            <div class="sub">Informação, diferenças e como agir</div>
         </div>
 
-        <div class="card cyber">
-            <h3>Cyberbullying (virtual)</h3>
-            <ul>
-                <li><strong>Pervasivo:</strong> a vítima pode ser atingida a qualquer hora e em qualquer lugar (casa, escola, etc.).</li>
-                <li><strong>Viral:</strong> o conteúdo (foto, vídeo, mensagem) pode ser compartilhado massivamente e ficar disponível para sempre.</li>
-                <li><strong>Anonimato:</strong> a falsa sensação de anonimato encoraja o agressor, que muitas vezes não vê a reação da vítima, sentindo menos remorso.</li>
-                <li><strong>Sem trégua:</strong> não há um ambiente seguro; o celular e o computador viram canais de agressão constante.</li>
-            </ul>
+        <div class="definicoes">
+            <p>
+                <strong>Bullying</strong> – definido pela Lei nº 13.185/2015 como a prática de intimidação sistemática, caracterizada por violência física ou psicológica, repetitiva e intencional, em atos de humilhação, discriminação ou agressão. A palavra deriva do inglês <em>to bully</em> (intimidar) e descreve uma relação em que há repetição de agressões e desequilíbrio de poder entre agressor e vítima.
+            </p>
+            <p>
+                <strong>Cyberbullying</strong> – é a prática de intimidação sistemática realizada por meio de tecnologias digitais, como redes sociais, aplicativos de mensagem ou outros meios da internet. Nesse caso, a agressão ocorre no ambiente virtual, podendo atingir a vítima a qualquer momento e alcançar um grande número de pessoas.
+            </p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card bullying">
+                <h3>Bullying (presencial)</h3>
+                <ul>
+                    <li><strong>Localizado:</strong> geralmente ocorre na escola, no transporte escolar ou em ambientes de convivência.</li>
+                    <li><strong>Visível:</strong> as agressões acontecem presencialmente e costumam ser presenciadas por um grupo limitado.</li>
+                    <li><strong>Identidade conhecida:</strong> normalmente a vítima sabe quem é o agressor.</li>
+                    <li><strong>Limite físico:</strong> a casa ou outros espaços podem funcionar como ambiente de proteção temporária.</li>
+                    <li><strong>Exemplo:</strong> um aluno é constantemente alvo de apelidos ofensivos e empurrões durante o recreio pelos mesmos colegas.</li>
+                </ul>
+            </div>
+
+            <div class="card cyber">
+                <h3>Cyberbullying (virtual)</h3>
+                <ul>
+                    <li><strong>Pervasivo:</strong> a vítima pode ser atingida a qualquer hora e em qualquer lugar.</li>
+                    <li><strong>Viral:</strong> conteúdos ofensivos podem ser compartilhados rapidamente e permanecer disponíveis por muito tempo.</li>
+                    <li><strong>Anonimato:</strong> o agressor pode esconder sua identidade, o que aumenta a sensação de impunidade.</li>
+                    <li><strong>Sem trégua:</strong> dispositivos digitais podem transformar o ambiente virtual em um canal constante de agressão.</li>
+                    <li><strong>Exemplo:</strong> alguém cria um perfil falso para publicar fotos de um colega com comentários humilhantes e incentivar ataques online.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h4>Os papéis envolvidos</h4>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h5>Agressor (Bully)</h5>
+                    <p>Quem pratica a agressão. Pode agir sozinho ou em grupo. Em alguns casos busca afirmação social, poder sobre os colegas ou reproduz comportamentos violentos aprendidos.</p>
+                </div>
+                <div class="role-card">
+                    <h5>Vítima</h5>
+                    <p>Quem sofre a agressão. Pode desenvolver ansiedade, baixa autoestima, isolamento social e dificuldades no rendimento escolar.</p>
+                </div>
+                <div class="role-card">
+                    <h5>Vítima-Agressora</h5>
+                    <p>Pessoa que sofre bullying em determinado contexto e reproduz comportamentos agressivos em outro ambiente.</p>
+                </div>
+                <div class="role-card">
+                    <h5>Testemunhas (Plateia)</h5>
+                    <p>São os colegas que presenciam a agressão. Quando permanecem em silêncio, podem reforçar o comportamento do agressor e aumentar o isolamento da vítima.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>Consequências para a saúde mental</h4>
+            <div class="consequencias">
+                <h6>O bullying não é uma simples "brincadeira". Estudos apontam impactos sérios no desenvolvimento emocional.</h6>
+                <ul>
+                    <li><strong>Para a vítima:</strong> medo, vergonha, ansiedade, depressão, isolamento social e queda no desempenho escolar.</li>
+                    <li><strong>Para o agressor:</strong> manutenção de comportamentos violentos, dificuldades de convivência social e maior risco de envolvimento em comportamentos ilícitos no futuro.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="info-note">
+            <strong>No Brasil, o bullying foi reconhecido e definido pela Lei nº 13.185/2015, que criou o Programa de Combate à Intimidação Sistemática.</strong>
+            Posteriormente, a Lei nº 14.811/2024 passou a considerar o bullying e o cyberbullying como crimes no país, prevendo punições legais para quem pratica essas condutas.<br><br>
+            Em casos de cyberbullying, guarde provas (prints) e procure ajuda de responsáveis, educadores ou autoridades.<br>
+            SaferNet Brasil: <a href="https://www.safernet.org.br" target="_blank">www.safernet.org.br</a> | Disque 100
+        </div>
+
+        <div class="footer">
+            Site produzido por estudantes da Escola Estadual Básica Professor Heleodoro Borges <br>
+            Terceirão Integral | Técnico em Informática para Internet | 2026
+            <p style="margin-top: 8px;">Fontes: Lei nº 13.185/2015 | Lei nº 14.811/2024 | SaferNet Brasil | UNICEF Brasil | UNESCO</p>
+            <p style="margin-top: 6px;">Jaraguá do Sul - SC</p>
         </div>
     </div>
-
-    <!-- Papéis envolvidos - grid 2x2 com cards e sombra direita/baixo -->
-    <section>
-        <h4>Os papéis envolvidos</h4>
-        <div class="roles-grid">
-            <div class="role-card">
-                <h5>Agressor (Bullie)</h5>
-                <p>Quem pratica a agressão. Pode agir sozinho ou em grupo. Estudos mostram que agressores também costumam apresentar sintomas depressivos.</p>
-            </div>
-            <div class="role-card">
-                <h5>Vítima</h5>
-                <p>Quem sofre a agressão. Pode desenvolver ansiedade, baixa autoestima, isolamento social e queda no rendimento escolar.</p>
-            </div>
-            <div class="role-card">
-                <h5>Vítima-Agressora</h5>
-                <p>Uma pessoa que é vítima em um ambiente e agressora em outro, alternando papéis. Isso causa grande confusão na formação da identidade do jovem.</p>
-            </div>
-            <div class="role-card">
-                <h5>Testemunhas (Plateia)</h5>
-                <p>São a maioria. Quando se calam, legitimam a violência para o agressor e causam sensação de abandono para a vítima. É fundamental ensinar as testemunhas a intervir ou pedir ajuda.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Consequências - sem card, apenas texto com fundo e sombra -->
-    <section>
-        <h4>Consequências para a saúde mental</h4>
-        <div class="consequencias">
-            <h6>Os impactos não são "brincadeiras de criança". Segundo pesquisas acadêmicas e fontes de saúde, as consequências podem ser graves.</h6>
-            <ul>
-                <li><strong>Para a vítima:</strong> Medo, vergonha, ansiedade, depressão, síndrome do pânico, ideação suicida e, em casos extremos, atos de vingança (como ataques a escolas).</li>
-                <li><strong>Para o agressor:</strong> Se não for corrigido, o comportamento violento se perpetua, podendo levar à exclusão social e até à criminalidade na vida adulta.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Bloco informativo com sombra direita/baixo -->
-    <div class="info-note">
-        O cyberbullying pode ser denunciado anonimamente. Guarde prints e procure um adulto de confiança.<br>
-        SaferNet Brasil: <a href="https://www.safernet.org.br" target="_blank">canaldeajuda.org.br</a> | Disque 100
-    </div>
-
-    <div class="footer">
-        Site produzido por estudantes da Escola Estadual Básica Professor Heleodoro Borges <br>
-        Terceirão Integral | Técnico em Informática para Internet | 2026
-        <p style="margin-top: 8px;">Fontes: Lei nº 13.185/2015 | SaferNet Brasil | UNICEF Brasil</p>
-        <p style="margin-top: 6px;">Jaraguá do Sul - SC</p>
-    </div>
-</div>
 </body>
 </html>
